@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="app.js"> </script>
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center"> Scientific Calculator</h1>
+    <table class="container-fluid" >
+        <div class="calculator card" class="container d-flex justify-content-center align-items-center "  >
+
+            <thead><input type="text" class="calculator-screen z-depth-1 w-100" placeholder="0" value="" id="result" /></thead>
+
+            <div class="calculator-keys"  >
+                <tBody>
+                
+                    <tr>
+
+                        <td> <button type="button" class="operator btn  btn-info w-100" value="+" onclick="getNum('+')">+</button></td>
+                        <td> <button type="button" class="operator btn btn-info w-100" value="-" onclick="getNum('-')">-</button></td>
+                        <td> <button type="button" class="operator btn btn-info w-100" value="*" onclick="getNum('*')">&times;</button></td>
+                        <td> <button type="button" class="operator btn btn-info w-100" value="/" onclick="getNum('/')">&divide;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-dark w-100" onclick="getNum('Math.log')">log</button></td>
+                        <td><button type="button" class="btn btn-dark w-100" onclick="getNum('Math.PI')">pi</button></td>
+                        <td><button type="button" class="btn btn-dark w-100" onclick="getNum('%')">%</button></td>
+                        <td><button type="button" class="btn btn-dark w-100" onclick="getNum('Math.E')">E</button></td>
+                       
+                    </tr>
+                    
+                    <tr>
+                        <td><button type="button" class="btn btn-dark w-100" onclick="getNum('Math.sin')">sin</button></td>
+                        <td><button type="button" class="btn btn-dark w-100" onclick="getNum('Math.cos')">cos</button>
+                            <td><button type="button" class="btn btn-dark w-100" onclick="getNum('Math.tan')">tan</button></td>
+                            <td><button type="button" class="operator btn btn-dark  w-100"
+                                onclick="removeNum()">del</button></td>
+                            </tr>
+                            <tr>
+                                <td><button type="button" class="btn btn-dark w-100"
+                                    onclick="getNum('Math.asin')">sin<sup>-1</sup></button></td>
+                            <td><button type="button" value="4" class="btn btn-dark w-100"
+                                    onclick="getNum('Math.acos')">cos<sup>-1</sup></button></td>
+                                <td><button type="button" class="btn btn-dark w-100" onclick="getNum('**2')">x<sup>2</sup></button>
+                                </td>
+                                <td><button type="button" class="btn btn-dark w-100" onclick="getNum('**3')">x<sup>3</sup></button>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td> <button type="button" value="7" class="btn btn-light waves-effect w-100" onclick="getNum('7')">7</button></td>
+                        <td> <button type="button" value="8" class="btn btn-light waves-effect w-100" onclick="getNum('8')">8</button></td>
+                        <td> <button type="button" value="9" class="btn btn-light waves-effect w-100" onclick="getNum('9')">9</button></td>
+                        <td> <button type="button" value="	&#40" class="btn btn-secondary waves-effect w-100" onclick="getNum('&#40')">&#40;</button></td>
+
+                    </tr>
+                    <tr>
+                        <td><button type="button" value="4" class="btn btn-light waves-effect w-100" onclick="getNum('4')" >4</button></td>
+                        <td><button type="button" value="5" class="btn btn-light waves-effect w-100" onclick="getNum('5')">5</button></td>
+                        <td><button type="button" value="6" class="btn btn-light waves-effect w-100"  onclick="getNum('6')">6</button></td>
+                        <td> <button type="button" value="	&#40" class="btn btn-secondary waves-effect w-100" onclick="getNum('&#41')">	&#41;</button></td>
+
+                    </tr>
+                    <tr>
+                        <td> <button type="button" value="1" class="btn btn-light waves-effect w-100" onclick="getNum('1')">1</button></td>
+                        <td> <button type="button" value="2" class="btn btn-light waves-effect w-100" onclick="getNum('2')">2</button></td>
+                        <td> <button type="button" value="3" class="btn btn-light waves-effect w-100" onclick="getNum('3')">3</button></td>
+                        <td> <button type="button" value="E" class="btn btn-secondary waves-effect w-100" onclick="getNum('&#69')">&#69;</button></td>
+
+                    </tr>
+                    <tr>
+
+                        <td> <button type="button" class="decimal function btn btn-secondary w-100" value="." onclick="getNum('.')">.</button></td>
+                        <td> <button type="button" value="0" class="btn btn-light waves-effect w-100" onclick="getNum('0')">0</button></td>
+                        <td> <button type="button" class="all-clear function btn btn-danger btn-sm w-100"
+                                 value="all-clear" onclick="clearresult('C')">C</button></td>
+                        <td>  <button type="button" class="equal-sign operator btn btn-secondary w-100" value="=" onclick="getResult(eval())">=</button></td>
+                    </tr>
+                </tBody>
+            
+            </div>
+        </div>
+    </table>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
